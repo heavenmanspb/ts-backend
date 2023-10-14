@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2021",
+    "strictFunctionTypes": true,
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "declaration": false,
+    "resolveJsonModule": true,
+    "importsNotUsedAsValues": "error"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "./src/test"
+  ],
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true
+  }
+}

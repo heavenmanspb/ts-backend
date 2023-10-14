@@ -1,0 +1,11 @@
+version: "3"
+services:
+  ts-backend:
+    image: ts-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ts-backend
+    restart: unless-stopped
+    network_mode: "host"
+    env_file: .env

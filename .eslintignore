@@ -1,0 +1,47 @@
+#project specific
+dev
+engine
+runner
+public
+
+# Node template
+node_modules
+logs
+*.log
+npm-debug.log*
+.node_repl_history
+.npm
+tsconfig.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# tests
+.nyc_output/
+.ipynb_checkpoints
+.DS_Store
+
+# ide
+.idea
+.vscode
+/nbproject
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# temp files
+*~
+~*
+tmp
+
+# env files
+.env
+.env.*
+!.env.sample
+
+*.d.ts
