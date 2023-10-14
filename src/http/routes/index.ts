@@ -12,5 +12,9 @@ export default (di: {
     fastify.setValidatorCompiler(validatorCompiler)
     fastify.setErrorHandler(errorHandlerFactory(di.logger))
 
+    fastify.addHook('onSend', async (req, res, payload) => {
+        if (payload === undefined) res.code(204).send()
+    })
+
     await fastify.register(usersRoutes(di.usersController), { prefix: '/users' })
 }
