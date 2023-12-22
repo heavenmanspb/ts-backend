@@ -1,4 +1,4 @@
-FROM node:20-alpine as build
+FROM node:21-alpine as build
 LABEL stage=builder
 WORKDIR /app
 COPY package.json .
@@ -8,7 +8,7 @@ COPY ./src ./src
 COPY tsconfig.json .
 RUN npm run build
 
-FROM node:20-alpine
+FROM node:21-alpine
 WORKDIR /app
 COPY package.json .
 COPY package-lock.json .

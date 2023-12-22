@@ -10,7 +10,7 @@
     "baseUrl": ".",
     "declaration": false,
     "resolveJsonModule": true,
-    "importsNotUsedAsValues": "error"
+    "verbatimModuleSyntax": true
   },
   "include": [
     "./src/**/*.ts"

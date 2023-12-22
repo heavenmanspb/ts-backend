@@ -15,9 +15,7 @@ export class UsersDao extends EntityDao<TUser> implements IUsersDao {
     }
 
     async getUsersPaginated(where?: TEntityWithRaw<TUser>, orderBy?: TOrderBy<TUser>, pagination?: TPagination): Promise<TPaginatedList<TUser>> {
-        const result = await this.getAllPaginated(where, orderBy, pagination)
-        console.log(result)
-        return result
+        return this.getAllPaginated(where, orderBy, pagination)
     }
 
     async createUser(user: Partial<TUser>): Promise<TUser> {

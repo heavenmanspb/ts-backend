@@ -1,6 +1,5 @@
 import { logger, controllers } from './container.js'
 import { httpOpts } from './config.js'
-
 import { FastifyServer } from './http/server.js'
 
 const server = new FastifyServer({
