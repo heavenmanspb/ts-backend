@@ -9,7 +9,7 @@ export class RateLimiter {
         this.interval = interval
     }
 
-    async execute<T, A extends any[]>(
+    async execute<T, A extends unknown[]>(
         asyncFn: (...args: A) => Promise<T>,
         ...args: A
     ): Promise<T> {
