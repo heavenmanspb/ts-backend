@@ -7,5 +7,5 @@ services:
       dockerfile: Dockerfile
     container_name: ts-backend
     restart: unless-stopped
-    network_mode: "host"
+    network_mode: "bridge"
     env_file: .env
