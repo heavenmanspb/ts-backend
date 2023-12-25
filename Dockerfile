@@ -15,4 +15,6 @@ COPY package-lock.json .
 RUN npm ci --omit=dev
 COPY --from=build ./app/dist .
 COPY ./version ./version
-CMD ["npm run db:migrate:up && node ./app.js"]
+COPY ./migrations ./migrations
+COPY ./knexfile.js ./knexfile.js
+ENTRYPOINT ["/bin/sh", "-c", "npm run docker:db:migrate:up && NODE_ENV=dev node ./app.js"]
